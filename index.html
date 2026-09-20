@@ -4,33 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahilan Bhattacharya</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <script>
+    (function () {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <aside class="sidebar">
-    <div class="mark">Ahilan<br />Bhattacharya</div>
-    <nav>
-      <a href="index.html" aria-current="page"><span class="num">01</span> Home</a>
-      <a href="experience.html"><span class="num">02</span> Experience</a>
-      <a href="blogs.html"><span class="num">03</span> Blogs</a>
-      <a href="certificates.html"><span class="num">04</span> Certificates</a>
-      <a href="contact.html"><span class="num">05</span> Contact</a>
-    </nav>
-    <div class="sidebar-footer">© 2026</div>
-  </aside>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Ahilan Bhattacharya</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">About Me</a>
+        <a href="blogs.html">Blogs/Writeups</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contacts</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+        <span class="toggle-track" aria-hidden="true"><span class="toggle-thumb"></span></span>
+        <span class="toggle-label">Dark</span>
+      </button>
+    </div>
+  </header>
 
   <main class="hero">
-    <h1>Ahilan Bhattacharya</h1>
-    <div class="rule"></div>
-    <span class="eyebrow">About me</span>
-    <p class="desc">
+    <p class="eyebrow">About Me</p>
+    <h1>Hello, Ahilan Bhattacharya here.</h1>
+    <p class="lede">
       Building and breaking things at the intersection of code and curiosity.
       Welcome to my corner of the internet.
     </p>
@@ -38,5 +42,6 @@
 
   <footer class="site-footer">© 2026 Ahilan Bhattacharya</footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
